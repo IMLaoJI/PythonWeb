@@ -10,6 +10,7 @@
     <form action="/reg/" method="GET">
         <p>
             姓名: <input type="text" name="username" id="username" value="" placeholder="您的姓名">
+            <input type="hidden" name="" value="!$!@#sdafc">   <!-- 隐藏域,反爬取 -->
         </p>
         <p>
             密码: <input type="password" name="" value="">
@@ -24,6 +25,35 @@
             简介:
             <textarea name="" id="" cols="25" rows="5"></textarea>
         </p>
+        <p>
+            性别:
+            <input type="radio" name="gender" value="1"> 男
+            <input type="radio" name="gender" value="2"> 女
+        </p>
+        <p>
+            技能:
+            <input type="checkbox" name="skill" value=""> Python
+            <input type="checkbox" name="skill" value=""> c#
+            <input type="checkbox" name="skill" value=""> PHP
+            <input type="checkbox" name="skill" value=""> Java
+        </p>
+        <p>
+            头像:
+            <input type="file" name="" value="">
+        </p>
+        <p>
+            国际:
+            <select name="country">  <!-- 加入 multiple="multiple" 以全部展示下拉列表 -->
+                <option value="-1">请选择</option>
+                <option value="1">中国</option>
+                <option value="2">美国</option>
+                <option value="3">韩国</option>
+                <option value="4">法国</option>
+            </select>
+        </p>
+        <input type="submit" name="" value="提交">
+        <input type="button" name="" value="普通按钮">
+        <input type="reset" name="" value="重置按钮">
     </form>
 </body>
 </html>
