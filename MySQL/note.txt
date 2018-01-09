@@ -1,0 +1,12 @@
+MySQL
+
+ROW (Column)
+Table
+Data
+DataBase
+DBMS              数据库管理系统
+DBS/DBAS
+
+Entity
+Relation
+范式

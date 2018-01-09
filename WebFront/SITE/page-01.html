@@ -8,33 +8,57 @@
     <script>
         function init(){
             var questions = [{
-                    title: "Python 是支持面向对象吗?",
-                    options: ["支持", "不支持"],
-                    answer: "支持"
-                },{
-                    title: "Flask 默认内置模板系统是什么?",
-                    options: ["ABC", "Jinja2","Django Template"],
-                    answer: "支持"
-                },{
-                    title: "Django中数据模型默认继承自哪个类?",
-                    options: ["Model", "Entity"],
-                    answer: "Model"
-                } ];
-                for(i=0; i<questions.length; i++){
-                    var article = document.createElement("article");
-                    article.innerHTML = "<p>" + (i + 1) + "." + questions[i].title + "</p>";
+                title: "Python 是支持面向对象吗?",
+                options: ["支持", "不支持"],
+                answer: "支持"
+            },{
+                title: "Flask 默认内置模板系统是什么?",
+                options: ["ABC", "Jinja2", "Django Template"],
+                answer: "支持"
+            },{
+                title: "Django中数据模型默认继承自哪个类?",
+                options: ["Model", "Entity"],
+                answer: "Model"
+            }];
 
-                    for(j=0; j<questions[i].options.length; j++){
-                        var radio = document.createElement("input");
-                        radio.setAttribute("type", "radio");
-                        radio.setAttribute("id", "options" + i + '' + j);
+            for(i = 0; i < questions.length; i++){
+                var article = document.createElement("article");
+                article.innerHTML = "<p>" + (i + 1) + "." + questions[i].title + "</p>";
 
-                        article.append(radio);
-                    }
+                for(j=0; j<questions[i].options.length; j++){
+                    var radio = document.createElement("input");
+                    radio.setAttribute("type", "radio");
+                    radio.setAttribute("id", "options" + i + '' + j);
+                    radio.setAttribute("name", "option" + i);
+                    radio.setAttribute("value", i + ":" + questions[i].options[j]);
 
-                    document.getElementById("container").append(article);
+                    var label = document.createElement("label");
+                    label.setAttribute("for", "options" + i +''+j);
+                    label.innerHTML = questions[i].options[j];
+
+                    var br = document.createElement("br");
+
+                    article.append(radio);
+                    article.append(label);
+                    article.append(br);
                 }
+
+                document.getElementById("container").append(article);
             }
+
+            var button = document.createElement("button");
+            button.innerHTML = "检查答案";
+
+            button.onclick = function() {
+                var score = 0;
+                var rButtons = document.querySelectorAll("[id^='options']");
+                
+                for(i=0;)
+            }
+
+            document.getElementById("container").append(button);
+
+        }
 
         window.onload = init;
     </script>
@@ -46,8 +70,6 @@
     </header>
     <hr>
     <section id="container">
-      <input type="radio" name="q1" value="true" id="a1"> <label for="a1">支持</label>
-      <input type="radio" name="q1" value="false" id="a2"> <label for="a2">不支持</label>
     </section>
 </body>
 
