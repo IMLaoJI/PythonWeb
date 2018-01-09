@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function init(){
+            var questions = [{
+                    title: "Python 是支持面向对象吗?",
+                    options: ["支持", "不支持"],
+                    answer: "支持"
+                },{
+                    title: "Flask 默认内置模板系统是什么?",
+                    options: ["ABC", "Jinja2","Django Template"],
+                    answer: "支持"
+                },{
+                    title: "Django中数据模型默认继承自哪个类?",
+                    options: ["Model", "Entity"],
+                    answer: "Model"
+                } ];
+                for(i=0; i<questions.length; i++){
+                    var article = document.createElement("article");
+                    article.innerHTML = "<p>" + (i + 1) + "." + questions[i].title + "</p>";
+
+                    for(j=0; j<questions[i].options.length; j++){
+                        var radio = document.createElement("input");
+                        radio.setAttribute("type", "radio");
+                        radio.setAttribute("id", "options" + i + '' + j);
+
+                        article.append(radio);
+                    }
+
+                    document.getElementById("container").append(article);
+                }
+            }
+
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>小测验</h1>
+    </header>
+    <hr>
+    <section id="container">
+      <input type="radio" name="q1" value="true" id="a1"> <label for="a1">支持</label>
+      <input type="radio" name="q1" value="false" id="a2"> <label for="a2">不支持</label>
+    </section>
+</body>
+
+</html>
+
+
+<!--
+    1:
+    <script>
+        document.write("<h2>hello</h2>");
+        window.alert('OK');
+    </script>
+
+#       window.alert('ok');  window可省略
+----------------------------------------------------
+    2:
+    输入div#header可直接输入一个id为header的div标签
+
+
+
+-->
