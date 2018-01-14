@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+</head>
+<body>
+    <h1>表格</h1>
+    <table border="1" cellpadding="5" cellspacing="5">  <!-- border 边框粗细-->
+        <thead>  <!-- thead 表头行-->
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Tom</td>
+                <td>88</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tom</td>
+                <td>88</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Tom</td>
+                <td>88</td>
+                <!-- tr*3>td*2 快速建表-->
+                <td>
+                    <table border="1">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tom</td>
+                <td>88</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Tom</td>
+                <td>88</td>
+                <td rowspan="2">89</td>  <!-- 单元格跨行-->
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Tom</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td colspan="3">534</td>  <!-- 单元格跨列-->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
