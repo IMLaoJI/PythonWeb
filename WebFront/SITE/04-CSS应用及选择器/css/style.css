@@ -1,5 +1,11 @@
-p, h1, h2 {
+body {
+    background: green;
+}
+
+/* 大标题样式 */
+h1, h2 {
     color: blueviolet;
+    border: solid 1px #000;
     background-color: aqua;
 }
 #container{
