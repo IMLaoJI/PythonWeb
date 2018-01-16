@@ -1,0 +1,38 @@
+body {
+    /* background-image: url(../images/bg.jpg);
+    background-attachment: fixed; */
+
+    font-family: "微软雅黑","宋体","黑体",verdana,"Times New Roman",serif;
+}
+
+h1,h2,h3,p{
+    font-weight: 300;
+}
+
+p {
+    text-indent: 100px;
+    color: black;
+    /*                   rgb (255,0,0) ; #ff0000 */
+    /* background-color: #0f0;                   */
+    font-style: italic; /* 斜体 */
+    font-size: 18px;     /* 像素 */ 
+    font-size: 2em;      /* 倍数 */
+    text-align: justify-all;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+#my-bg{
+    font-family: 
+
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+
+    background-color: #0f0;
+    background-image: url(../images/bg.jpg);    /* 以style.css文件位置为起始 */
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    /* 以上4行可简写为: */
+    background: #0f0 url(../images/bg.jpg) no-repeat left bottom;
+}
