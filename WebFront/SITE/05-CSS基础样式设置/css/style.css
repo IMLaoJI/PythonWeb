@@ -1,7 +1,7 @@
 body {
     /* background-image: url(../images/bg.jpg);
     background-attachment: fixed; */
-
+    
     font-family: "微软雅黑","宋体","黑体",verdana,"Times New Roman",serif;
 }
 
@@ -9,16 +9,49 @@ h1,h2,h3,p{
     font-weight: 300;
 }
 
+table {
+    border-collapse: collapse;   /* 边框折叠,双线边框变单线 */
+    width: 400px;                /* 固定宽度      */
+    table-layout: fixed;         /* 宽度由值决定  */
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul,ol li{
+    list-style-position: outside;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+a:link{ text-decoration: none; color: #555;}       /* 默认状态      */
+a:visited{ text-decoration: none; color: #555;}    /* 点击后状态    */
+a:hover{ text-decoration: none; color: #f00;}      /* handover 鼠标指针经过时的状态*/
+a:active{ text-decoration: none;}       /* 正在激活状态  */
+
+a.footer:link{ text-decoration: none; color: #ff0;}
+a.footer:visited{ text-decoration: none; color: #555;}
+a.footer:hover{ text-decoration: none; color: #f00;}
+a.footer:active{ text-decoration: none;}
+
 p {
     text-indent: 100px;
     color: black;
     /*                   rgb (255,0,0) ; #ff0000 */
     /* background-color: #0f0;                   */
-    font-style: italic; /* 斜体 */
-    font-size: 18px;     /* 像素 */ 
-    font-size: 2em;      /* 倍数 */
+    font-style: italic;  /* 斜体 */
+    font-size: 18px;     /* 字体大小(像素) */ 
+    font-size: 1em;      /* 字体大小(倍数) */
+    line-height: 24px;   /* 行间距(像素) */
     text-align: justify-all;
-    text-decoration: underline;
+    text-decoration: underline;   /* 下划线 */
     text-transform: capitalize;
 }
 
