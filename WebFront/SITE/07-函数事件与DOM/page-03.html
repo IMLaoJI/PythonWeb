@@ -31,9 +31,10 @@
     console.log(document.getElementById("p-1"));
     console.log(document.getElementById("link-uke"));
     console.log(document.getElementsByTagName("p"));
-    console.log(document.getElementsByTagName("p")[0]);  //只查看第一个结果
+    console.log(document.getElementsByTagName("p")[0]);  // [0]只查看第一个结果
     console.log(document.getElementsByClassName("bg-green")[0]);
     console.log(document.getElementsByClassName("bg-green")[0].hasAttributes("class"));
 
-    document.write(document.getElementById("logo").getAttribute("src"));
+    document.write(document.getElementById("logo").setAttribute("title", "网站标志")); //设置属性
+    document.write(document.getElementById("logo").getAttribute("src"));               //找到"logo",获取并打印"src"属性
 </script>
