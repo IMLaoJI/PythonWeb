@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>优品课堂 Web前端系列教程</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
+    <script>
+        // javascript 约定俗成的骆驼命名法 sayHello
+        function sayHello (name) {
+            //document.write("<h1>您好</h1>");
+            //window.alert("Hello" + name);
+            document.write("您好: " + name);
+        }
+
+        function add(a, b){
+            return a + b;
+        }
+
+        function ok() {
+            window.alert("OK");
+        }
+
+        function openUrl() {
+            window.location = "http://ute.ke.qq.com";
+        }
+
+        function getConfirmation() {
+            var result = confirm("是否确认删除当前记录?");
+            if (result == true) { document.write("记录已删除!");}
+            else {
+                document.write("操作已取消!");
+            }
+        }
+
+        function getValue() {
+            var name = prompt("请输入您的姓名: ", "Tom");
+            document.write("<h1>您好: " + name + "</h1>");
+        }
+
+        //sayHello();
+</script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p onclick="openUrl()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat labore a eligendi, quia hic libero consequatur qui tenetur doloribus quasi sunt ipsa? Repudiandae, inventore a! Totam sapiente minima corrupti est!</p>
+    <input type="button" value="单击" onclick="ok();">
+    <input type="button" value="删除记录" onclick="getConfirmation();">
+    <input type="button" value="获取姓名" onclick="getValue();">
+</body>
+</html>
+

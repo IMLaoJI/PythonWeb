@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>优品课堂 Web前端系列教程</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
+
+    <style>
+        .bg-green {
+            background-color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <img id="logo" src="http://temp.im/200x200" alt="">
+    <div>
+        <p id="p-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit molestias enim animi provident accusantium saepe impedit autem minus aliquam quis, necessitatibus eaque commodi totam eius asperiores voluptatum? Repellendus, accusantium ullam.</p>
+    </div>
+    <div>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ad in. Expedita corrupti eum a! Vel, similique dicta maiores molestias aliquam harum a, aspernatur tempore blanditiis enim earum nesciunt sit!</P>
+        <ul class="bg-green">
+            <li><a href="#" id="link-uke">优品课堂</a></li>
+            <li><a href="#" id="link-uke">优品课堂</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    console.log(document.getElementById("p-1"));
+    console.log(document.getElementById("link-uke"));
+    console.log(document.getElementsByTagName("p"));
+    console.log(document.getElementsByTagName("p")[0]);  //只查看第一个结果
+    console.log(document.getElementsByClassName("bg-green")[0]);
+    console.log(document.getElementsByClassName("bg-green")[0].hasAttributes("class"));
+
+    document.write(document.getElementById("logo").getAttribute("src"));
+</script>
