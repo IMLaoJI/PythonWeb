@@ -6,17 +6,37 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- <script src="js/scripts.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script> -->
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
+<!-- <body onload=""> 事件:"执行时"-->
     <h1>JQuery</h1>
+
+    <img src="http://temp.im/300x200" alt="" title="1">
+
+    <div id="msg">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed aliquid expedita placeat voluptatem aperiam veniam fugiat pariatur vitae quis illo, obcaecati sapiente exercitationem quaerat? Minima dolor voluptatibus tenetur? Praesentium, totam.</p>
+    </div>
+    <div class="bg-red">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae beatae nobis. Quod, explicabo neque? Non, eveniet temporibus voluptate pariatur, nesciunt soluta at fugiat saepe harum neque eos? Sed, nulla?</p>
+    </div>
+
+    <form action="">
+        <input type="text">
+        <input type="button" value="按钮">
+        <input type="email">
+    </form>
 </body>
 </html>
 <script>
     // "$"选择, "document"整个文档, ".ready"读取完毕后(非JavaScript语言)
     $(document).ready(function () {
         //自定义代码
-        alert("ok");
+        $("#msg").css("background","green");  // ID选器"#", 此处css为函数,接收两个参数
+        $(".bg-red").css("background","red"); // 类选择"."
+        $("p").css("color","yellow");         // 元素名称选择
+        $("img[title='1']").css("border","10px solid #000");// 按属性过滤
+        $("input[type='text']").css("background","green");  // 按属性过滤
     });
 
 </script>
