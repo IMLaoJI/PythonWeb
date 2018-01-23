@@ -19,17 +19,17 @@
 <script>
 jQuery(document).ready(function($) {
     $("#btn-hide").click(function () {
-        $("p").hide("slow");
+        $("p").fadeOut(2000);
     });
 
     $("#btn-show").bind("click",function (){
-        $("p").show(2000,function (argument) {
+        $("p").fadeIn(2000,function (argument) {
             alert("显示完成!");   // 回调函数
         });
     });
 
     $('#btn-toggle').click(function(event) {
-        $("p").toggle(1000)
+        $("p").fadeToggle(1000)
     });
 });
 </script>
