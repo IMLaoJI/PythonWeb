@@ -22,7 +22,7 @@
                     <label for="pwd" class="sr-only">密码:</label>
                     <input type="password" id="pwd" placeholder="密码" class="form-control">
                 </div>
-                <input type="submit" value="登陆" class="btn btn-primary">
+                <input type="submit" value="登录" class="btn btn-primary">
             </form>
         </div>
         <div class="row">
@@ -30,13 +30,25 @@
                 <div class="form-group">
                     <label for="username" class="control-label col-md-2">用户名:</label>
                     <div class="col-md-4">
-                        <input type="text" id="username" name="username" class="form-control">
+                        <!-- <p class="form-control-static">优品课堂</p> -->
+                        <input type="text" value="优品课堂" id="username" disabled="disabled" name="username" class="form-control input-sm">
+                        <!-- disabled="disabled" 禁用 -->
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="control-label col-md-2">邮箱:</label>
-                    <div class="col-md-4">
-                        <input type="email" id="email" class="form-control">
+                    <div class="col-md-10">
+                        <input type="email" id="email" class="form-control input-lg">  <!-- input-lg  input-sm -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label col-md-2">城市:</label>
+                    <div class="col-md-3">
+                        <select name="city" id="city" class="form-control input-lg">
+                            <option value="1">北京</option>
+                            <option value="2">上海</option>
+                            <option value="3">深圳</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
