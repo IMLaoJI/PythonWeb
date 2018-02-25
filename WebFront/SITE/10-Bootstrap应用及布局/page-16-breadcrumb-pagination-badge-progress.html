@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>优品课堂 Web前端系列教程</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- 网页兼容性说明 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- 跨屏自适应说明 (PC PAD MOBILE) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="progress progress-striped">  <!-- striped 进度条条纹样式 -->
+                <div class="progress-bar progress-bar-danger" style="width:45%">  <!-- 进度条颜色 ; 45%进度条 -->
+                    <span class="sr-only">45%</span>  <!-- sr(screen reader) 用于残障人士的屏幕内容读报 -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary btn-lg">收件箱 <span class="badge">5</span></button>  <!-- 徽章 -->
+        </div>
+        <div class="row">
+        <table class="table table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Job <span class="label label-warning">new</span></th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tom</td>
+                <td>Dev </td>
+                <td></td>
+            </tr>
+        </table>
+        </div>
+        <div class="row">
+            <h1>优品课堂 Flask 网站开发 <span class="label label-danger">最新</span></h1>
+        </div>
+        <div class="row">
+            <div class="col md 12 text-center">
+                <ul class="pagination pagination-md">  <!-- 分页导航-->
+                    <li class="disabled"><a href="#">&laquo;</a></li>  <!-- 也可以直接输入"<<"-->
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">&raquo;</a></li>  <!-- 也可以直接输入">>"-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="breadcrumb">  <!-- 面包屑导航 -->
+                <li><a href="#">首 页</a></li>
+                <li><a href="#">新闻中心</a></li>
+                <li class="active">新闻列表</li>  <!-- 末尾为当前页,不用超链接 -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+jQuery(document).ready(function($) {
+
+});
+</script>
