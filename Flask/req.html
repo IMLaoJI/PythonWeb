@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Request</h1>
+    <table border="1" cellpadding="5"></table>
+        <tr>
+            <td>.args</td>
+            <td>{{req.args.get('name')}}</td>
+        </tr>
+        <tr>
+            <td>.headers</td>
+            <td>{{req.method}}</td>
+        </tr>
+        <tr>
+            <td>.path</td>
+            <td>{{req.path}}</td>
+        </tr>
+        <tr>
+            <td>.url</td>
+            <td>{{req.url}}</td>
+        </tr>
+</body>
+</html>
