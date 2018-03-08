@@ -32,7 +32,7 @@
 
     <div class="container">
         <div class="row">
-            <a href="#my_modal" class="btn btn-primary" data-toggle="modal">打开对话框</a>
+            <a href="#" class="btn btn-primary">打开对话框</a>
         </div>
         <div class="row">
             <div class="alert alert-danger">
@@ -45,8 +45,11 @@
 </body>
 </html>
 <script>
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
     // alert('OK');
     // $("#my_modal").modal('show');
+    $('a.btn').click(function(event) {
+        $("#my_modal").modal('show');
+    });
 });
 </script>
