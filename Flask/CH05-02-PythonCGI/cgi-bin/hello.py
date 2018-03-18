@@ -14,5 +14,4 @@ html = """
 </body>
 </html>"""
 
-
 print(html)
