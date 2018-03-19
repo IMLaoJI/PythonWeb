@@ -10,3 +10,4 @@ os.chdir(webdir)
 server_address = ('', port)
 server_obj = HTTPServer(server_address, CGIHTTPRequestHandler)
 server_obj.serve_forever()   # 启动服务器
+
