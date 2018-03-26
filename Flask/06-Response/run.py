@@ -3,9 +3,11 @@ from flask import Flask, request
 app = Flask(__name__)
 app.debug = True
 
+
 @app.route('/')
 def index():
     return '首页'
+
 
 @app.route('/rq/')
 def test_rq():
@@ -17,6 +19,7 @@ def test_rq():
     data['endpoint'] = request.endpoint
 
     return str(data)
+
 
 if __name__ == '__main__':
     app.run()
