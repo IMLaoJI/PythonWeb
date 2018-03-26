@@ -4,9 +4,11 @@ from models.book import Book
 app = Flask(__name__)  # 根路径指定为hello.py的位置
 # app.debug = True
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/books/')
 def book_list():
@@ -18,6 +20,7 @@ def book_list():
         Book('Python 语言', 29.00, 'Eason', '人民邮电出版社')
     ]
     return render_template('book-list.html', books=books)
+
 
 @app.route('/contact/')
 def contact():
@@ -33,6 +36,7 @@ def contact():
     </body>
     </html>"""
     return html
+
 
 if __name__ == '__main__':
     app.run(debug=True)
