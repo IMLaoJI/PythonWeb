@@ -1,0 +1,16 @@
+{% set age = 15 %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+    {# <h1>欢迎: {{ name }}</h1> #}
+    <h2>年龄: {{ age }}</h2>
+
+    {% for i in range(5) %}
+        <h3>列表标题: {{ i }}</h3>
+    {% endfor %}
+</body>
+</html>
