@@ -9,5 +9,9 @@ app.debug = True
 def hello_world():
     return render_template('base.html')
 
+@app.route('/feedback/')
+def feedback():
+    return render_template('post.html')
+
 if __name__ == '__main__':
     app.run()
