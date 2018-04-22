@@ -44,7 +44,7 @@ def post_feedback():
         c.execute(sql,(subject, categoryid, username, email, body, is_processed, release_time))
         conn.commit()
         conn.close()
-        return redirect(url_for('/feedback/')
+        return redirect(url_for('/feedback/'))
 
 @app.route('/admin/list/')
 def feedback_list():
