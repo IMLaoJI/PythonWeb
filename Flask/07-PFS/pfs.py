@@ -31,7 +31,7 @@ def post_feedback():
     if request.method == 'POST':
         # 获取表单值
         subject = request.form['subject']
-        categoryid = request.form.get['category', 1]
+        categoryid = request.form.get('category', 1)
         username = request.form.get('username')
         email = request.form.get('email')
         body = request.form.get('body')
@@ -40,18 +40,31 @@ def post_feedback():
 
         conn = sqlite3.connect(DATABASE_URL)
         c = conn.cursor()
-        sql = "insert into feedback (Subject, CategoryID, UserName, Email, Image, Body, IsProcessed, ReleaseTime) values (?,?,?,?,?,?,?)"
+        sql = "insert into feedback (Subject, CategoryID, UserName, Email, Body, IsProcessed, ReleaseTime) values (?,?,?,?,?,?,?)"
         c.execute(sql,(subject, categoryid, username, email, body, is_processed, release_time))
         conn.commit()
         conn.close()
-        return redirect(url_for('/feedback/'))
+        return redirect(url_for('feedback'))
 
 @app.route('/admin/list/')
 def feedback_list():
     conn = sqlite3.connect(DATABASE_URL)
     c = conn.cursor()
-    sql = 'select * from feedback'
-    return render_template('feedback-list.html')
+    sql = 'select f.ROWID,f.*,c.CategoryName from feedback f inner join category c on c.ROWID = f.CategoryID order by f.ROWID desc'
+    # 升序为ASC,降序为DESC
+    feedbacks = c.execute(sql).fetchall()
+    conn.close()
+    return render_template('feedback-list.html', items=feedbacks)
+
+@app.route('/admin/feedback/del/<id>/')
+def delete_feedback(id=0):
+    conn = sqlite3.connect(DATABASE_URL)
+    c = conn.cursor()
+    sql = "delete from feedback where ROWID = ?"
+    c.execute(sql,(id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('feedback_list'))
 
 if __name__ == '__main__':
     app.run()
