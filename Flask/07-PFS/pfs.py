@@ -41,10 +41,12 @@ def post_feedback():
         conn = sqlite3.connect(DATABASE_URL)
         c = conn.cursor()
         sql = "insert into feedback (Subject, CategoryID, UserName, Email, Body, IsProcessed, ReleaseTime) values (?,?,?,?,?,?,?)"
-        c.execute(sql,(subject, categoryid, username, email, body, is_processed, release_time))
+        c.execute(sql, (subject, categoryid, username, email, body,
+                        is_processed, release_time))
         conn.commit()
         conn.close()
         return redirect(url_for('feedback'))
+
 
 @app.route('/admin/list/')
 def feedback_list():
@@ -56,6 +58,7 @@ def feedback_list():
     conn.close()
     return render_template('feedback-list.html', items=feedbacks)
 
+
 @app.route('/admin/feedback/del/<id>/')
 def delete_feedback(id=0):
     conn = sqlite3.connect(DATABASE_URL)
@@ -65,6 +68,7 @@ def delete_feedback(id=0):
     conn.commit()
     conn.close()
     return redirect(url_for('feedback_list'))
+
 
 if __name__ == '__main__':
     app.run()
