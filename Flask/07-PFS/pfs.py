@@ -61,7 +61,7 @@ def delete_feedback(id=0):
     conn = sqlite3.connect(DATABASE_URL)
     c = conn.cursor()
     sql = "delete from feedback where ROWID = ?"
-    c.execute(sql,(id,))
+    c.execute(sql, (id,))
     conn.commit()
     conn.close()
     return redirect(url_for('feedback_list'))
